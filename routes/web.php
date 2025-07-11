@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return 'Hello Page';
 });
+
+Route::get('/greet/{name}', function ($name) {
+    return 'Hello, ' . $name . '!';
+})->where('name', '[A-Za-z]+');
