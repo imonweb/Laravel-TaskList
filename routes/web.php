@@ -26,5 +26,8 @@ Route::get('/greet/{name}', function ($name) {
     return 'Hello, ' . $name . '!';
 })->where('name', '[A-Za-z]+');
 
+Route::get('/user/{id}', function ($id) {
+    return 'User ID: ' . $id;
+})->where('id', '[0-9]+');
 
 
